@@ -248,3 +248,10 @@ else
       }
       
 //In Lab: change a Map to a Set
+//Key will be a (String) WORD FROM BOOK==>What we are actually looking up
+//Value: Number of times that WORD OCCURS in book
+      Map.Entry<String, Integer> 
+                word    count for word
+                //Entry: reference to one COMPLETE KEY-VALUE PAIR
+                
+      
