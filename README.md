@@ -147,7 +147,33 @@ else
 
 //NOTE: element same as bucket
 
-  
+//Youtube Ex.
+
+      import java.util.HashMap;
+      
+      public class BasicHashMaps
+      {
+        static HashMap<String, Boolean> map = new HashMap<>();
+        public static void main(String[] args)
+        {
+          map.put("Kenny", true); //whenever we get the value Kenny form HashMap we get true
+          map.put("Joe", false);
+          
+          map.get("Kenny"); //returns boolean value
+          
+          if(map.containsKey("Kenny")) System.out.println("  ");
+          
+          if(map.containsValue(Boolean.FALSE)) System.out.println(2);
+          
+          for(String s: map.keySet()) //loop through keys
+          {
+              System.out.println(3);  //for string IN map.ketSet()
+          }
+          for(Boolean b: map.values()) //loop through values
+          {
+              System.out.println(4);
+          }
+        }  
   
   
   
