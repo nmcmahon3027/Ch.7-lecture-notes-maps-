@@ -60,6 +60,31 @@ else
   item is found or a null is found 
   
   
+ //Hash code inserion 
+ 
+//Need to use a CIRCULAR ARRAY 
+
+//Name| hashCode() | hashCode()% 5 (or size of ArrayList) (0 included!!)
+//If element index is taken, next index spot and so on...
+//THIS is called COLLISION 
+//Best way to avoid possibility of collision: Increase table size OR use PRIME NUMBER (fewer factors) 
+
+//If an element is DELETED, CANNOT assign null to it, MARK AS 'DELETED'!
+
+//CHAINING ****
+//Alternitive to Opening Addressing
+// LinkedList (aka: a bucket)(bucket hashing)
+
+//In a bucket (41 for ex) there will be a LinkedList w/ 'ñ' and ')' 
+//Only have to search from those 2 in that bucket 
+//% 41 ? in this bucket??
+//
+
+
+
+
+
+  
   
   
   
