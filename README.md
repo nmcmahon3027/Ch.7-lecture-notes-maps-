@@ -216,4 +216,34 @@ else
   //class: HashTableopen, algorithm for remove(Object key)
       private final Entry<K, V> DELETED = new Entry<K, V>(null, null);
       
+  
+  //Class HashTableChain (listing 7.10) page 352
+  
+    @Override
+    public V put(K key, V value) { //Give key and value want at that key
+      int index = key.hashVode() % table.length; /what bucket are we talking about?
+      if(index < 0)
+         index += table.length; //so we have a POSITIVE BUCKET #
+      if(table[index] == nul) { //see if table at that bucket # actually exists
+      
+        table[index] = new LinkedList<>(); //IF theres NO LINKEDLIST, I put one there
+      }  
+      for(Entry<K, V> nextItem : table[index]) {  //search through LinkedList and see if key was there
+                                                  //For Every Item (nextItem)
+        if(nextItem.getKey().equals(key)) { //If SEARCH IS SUCCESSFUL, REPLACE the old value
+        
+          V oldVal = nextItem.getValue();  //Replace value for this key
+          nextItem.setValue(value);
+          return oldVal;
+          
+         }
+      } 
+      //if KEY WAS NOT found, put new key in table (assert)
+      
+      numKeys++;
+      if(numKeys > (LOAD_THRESHOLD * table.length))  //everytime I add a new key, check load TH, if its too much==>rehash
+        rehash();
+      return null;
+      
+      }
       
