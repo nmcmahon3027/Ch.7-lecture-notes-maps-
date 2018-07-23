@@ -175,5 +175,45 @@ else
           }
         }  
   
+ //SIDE TASK: Convert an Array to a List
+ 
+      import java.util.*;
+      public class Whatever {
+        public static void main(String[] args) {
+        
+          String[] things = {"appl", "bob", "ham", "bob", "bacon"};
+          List<String> list = Arrays.asList(things); //Convert array to list
+          
+        
+        }
+      }  
+  
+
+
+      import java.util.HashMap;
+      public class HashMapProgram {
+        public static void main(String[] args) {
+        
+        
+          HashMap<Integer, String> HMap = new HashMap<Integer, String>();
+          
+          HMap.put(1, "one");
+          HMap.put(2, "two");
+          HMap.put(3, "three");
+          HMap.put(4, "four");
+          HMap.put(5, "five");
+          
+          System.out.println(HMap.size()); //Or (HMap.size<>)  ??
+          
+          //OUTPUT: 5
+          
+          System.out.println(HMap.get(2)); //W/ other syso commented out=> OUTPUT: two
+        }
+      }  
   
   
+  //if do find key, set to REFERENCE DELETED
+  //class: HashTableopen, algorithm for remove(Object key)
+      private final Entry<K, V> DELETED = new Entry<K, V>(null, null);
+      
+      
