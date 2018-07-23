@@ -80,9 +80,72 @@ else
 //% 41 ? in this bucket??
 //
 
+//**Section 7.4: Implementing the hash table**
 
+//Interface KWHashMap
 
+    V get(Object key)  
+    //returns the value associated w/ specified key. Returns null if key is not present
+    
+    boolean isEmoty() 
+    //returns true if this table contains a no key-value mappings
+    
+    V put(K key, V value)
+    //assoiciates specified value w/ the specified key
+    //Returns the previous value assoiciated w/ the specified key
+    //OR null if there was no mapping for the key
+    
+    V remove(Object key)
+    //Removes the mapping for this key from this table if it is present (optional operation)
+    //Returns previous value associated w/ specified key
+    //OR null if there was no mapping
+    
+    int size()
+    //Returns size of table
+    
+    Class entry
+    
+    Book
+    private final K key  //final K (generic) (object type) 
+    
+    Lab8: Class: Entry
+     //private static class Entry <Object type for Key, Object type for Value> {
+     
+     private static class Entry<K, V> {
+     
+        private finalk key;  //the key
+        
+        private V value;    //the value
+        
+        public Entry(K key, V value) {    //CONSTRUCTOR
+            this.key = key;
+            this.value = value;
+            }
+   
+         public K getKey() {   //Getter
+            return key;
+            }
+            
+          public V getValue() { //Getter
+            return value;
+            }
+            
+            public V setValue(V val) { //Setter, REPLACE old value w/ new value
+              V oldVal = value;
+              value = val;
+              return oldVal;
+              }
+              
+        }
+        
+  //Class: HashTableOpen
+  
+  //Method:   private int(Object key)   //Returns index of specified key if present in table
+                                        //Otherwise returns index of the first available slot
+              private void rehash()     //Doubles capacity of table & perm. removes deleted items
+              
 
+//NOTE: element same as bucket
 
   
   
